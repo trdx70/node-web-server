@@ -51,7 +51,13 @@ app.get('/about',(req,res)=>{
   res.render('about.hbs',{
     pageTitle: 'About Page',
   });
-})
+});
+
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  })
+});
 
 app.get('/bad',(req,res)=>{
   res.send({
@@ -61,5 +67,5 @@ app.get('/bad',(req,res)=>{
 
 
 app.listen(port,()=>{
-  console.log(`Server is up and running on port 3000 ${port}`);
+  console.log(`Server is up and running on port ${port}`);
 });
